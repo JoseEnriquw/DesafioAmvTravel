@@ -36,11 +36,11 @@ namespace PruebaApi.Controllers
         [ProducesResponseType(typeof(CreateUserResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(List<Notify>), StatusCodes.Status400BadRequest)]
         [ProducesResponseType(typeof(List<Notify>), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Update(int id, UpdateVM body) => Result(await Sender.Send(new UpdateUserCommand
+        public async Task<IActionResult> Update(int id, UpdateUserVM body) => Result(await Sender.Send(new UpdateUserCommand
         {
             Id = id,
-            Name = body.name,
-            Email = body.email
+            Name = body.Name,
+            Email = body.Email
         }));
 
         /// <summary>

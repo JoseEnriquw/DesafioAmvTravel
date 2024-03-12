@@ -9,7 +9,7 @@ namespace Infrastructure.Repository
     public class RepositoryEF : IRepositoryEF
     {
         private readonly ILogger<RepositoryEF> _logger;
-        private readonly DbContext _dbContext;
+        private readonly ApplicationDbContext _dbContext;
         public RepositoryEF(ILogger<RepositoryEF> logger, ApplicationDbContext dbContext)
         {
             _logger = logger;
